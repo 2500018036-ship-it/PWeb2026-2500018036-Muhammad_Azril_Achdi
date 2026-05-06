@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'left middle right'
+                'footer footer footer';
+            flex: 1;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        .left,
+        .middle,
+        .right {
+            padding: 20px;
+            min-height: 100%;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Left Column */
+        .left {
+            grid-area: left;
+            background-color: #3498db;
+        }
+
+        /* Middle Column */
+        .middle {
+            grid-area: middle;
+            background-color: #2ecc71;
+        }
+
+        /* Right Column */
+        .right {
+            grid-area: right;
+            background-color: #e67e22;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-areas:
+                    'header'
+                    'left'
+                    'middle'
+                    'right'
+                    'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="header">
+            <h2>Muhammad Azril Achdi</h2>
+            <p>NIM : 2500018036</p>
+        </div>
+
+        <div class="left">
+            <h3>Menu</h3>
+            <p>Home</p>
+            <p>Profile</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="middle">
+            <h3>Content</h3>
+            <p>Ini adalah bagian isi website menggunakan CSS Grid Layout.</p>
+        </div>
+
+        <div class="right">
+            <h3>Informasi</h3>
+            <p>Tugas Pemrograman Web</p>
+            <p>CSS Layout Grid</p>
+        </div>
+
+        <div class="footer">
+            <p>Footer - Muhammad Azril Achdi</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
